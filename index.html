@@ -1,0 +1,78 @@
+<!-- hola esto es un comentario-->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+	<title>Mi primera aplicación móvil</title>
+	<link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.min.css">
+	<link rel="stylesheet" type="text/css" href="css/mystilo.css">
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
+	<script type="text/javascript">
+		
+		$(document).ready(function (){
+
+			$("#btnFactorial").click(function(){
+
+					var n1=parseInt($("#num1").val());
+					var fac=1;
+
+					while (n1!=0){
+
+						fac=fac*n1;
+						n1--;
+					}
+					$("#res").val(fac);
+					
+					//alert("valor de la suma es: "+suma);
+				});
+		});
+	</script>
+</head>
+<body>
+	<div data-role="page" id="Principal">
+		<div data-role="header">
+			<p>Principal</p>
+		</div>	
+		<div data-role="content">
+			<p>Contenido de la aplicación</p>
+		
+		<a href="#Factorial" data-role="button" data-transition="turn">Calcular Factorial</a>
+		</div>
+		
+		</div>
+		<div data-role="footer">
+			<p>pie de la aplicación</p>
+		</div>
+	</div>
+	<div data-role="page" id="Contacto">
+		<div data-role="header">
+		<p>Contacto</p>
+		
+		</div>
+		<div data-role="content">
+		<p>cERSAR</p>
+		<p>rdsm.7.7.7@gmail.com</p>
+			
+		</div>
+		<div data-role="footer">
+		<p>Pie de la aplicación</p>			
+		</div>
+	</div>
+	<div data-role="page" id="Factorial">
+		<div data-role="header">
+		<p>FACTORIAL</p>
+		
+		</div>
+		<div data-role="content">
+			<input type="text" id="num1" placeholder="Escribe un número">	
+			
+			<input type="text" id="res" placeholder="Resultado">	
+			<input type="button" id="btnFactorial" value="Calcular Factorial">
+		</div>
+		<div data-role="footer">
+		<p>Pie de la aplicación</p>			
+		</div>
+	</div>
+</body>
+</html>
